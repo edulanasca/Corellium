@@ -1,0 +1,45 @@
+.superior{
+    -fx-background-color: #7aa329;
+}
+
+.tree-view{
+    
+}
+
+/* Botones del explorador de archivos */
+.button{
+    -fx-background-color: transparent;
+    -fx-border-width: 0px;
+    -fx-hgap: 5px;
+    -fx-vgap: 5px;
+}
+
+.button:hover{
+    -fx-background-color: #6b8e23;
+}
+
+/* Boton que contiene la imagen */
+#archivoBoton{
+    -fx-background-color: transparent;
+    -fx-pref-width: 128;
+    -fx-pref-height: 128;
+    -fx-font-size: 15px;
+}
+
+#archivoBoton:hover{
+    -fx-background-color: #ccf2ff;
+}
+
+#archivoBoton:selected{
+    -fx-background-color: transparent;
+}
+
+#archivoBoton:focused {
+-fx-background-color: #b8daff;
+}
+
+/* Boton y Label que contiene el nombre del archivo */
+#contenedor{
+    -fx-alignment: center;
+}
+

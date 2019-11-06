@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="borderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="1085.0" stylesheets="@../../css/ExploradorArchivos.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Corellium.Ventana.ExploradorArchivos.ExploradorDeArchivosController">
+   <left>
+      <TreeView fx:id="tree" editable="true" onEditStart="#editTree" prefHeight="400.0" prefWidth="318.0" BorderPane.alignment="CENTER" />
+   </left>
+   <top>
+      <VBox fx:id="ventanaSup" styleClass="superior" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <children>
+                  <Button fx:id="retroceder" disable="true" mnemonicParsing="false" onAction="#retroceder">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/ExploradorArchivos/icons8-left-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="avanzar" disable="true" mnemonicParsing="false" onAction="#avanzar">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/ExploradorArchivos/icons8-right-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <TextField fx:id="rutaActual" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="450.0">
+                     <HBox.margin>
+                        <Insets bottom="4.0" left="2.0" right="2.0" top="4.0" />
+                     </HBox.margin></TextField>
+                  <Button mnemonicParsing="false" onAction="#copiarBtn">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/ExploradorArchivos/icons8-copy-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin></Button>
+                  <Button mnemonicParsing="false" onAction="#pegarBtn">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/ExploradorArchivos/icons8-paste-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin></Button>
+                  <Button mnemonicParsing="false" onAction="#eliminarBtn">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/ExploradorArchivos/icons8-delete-bin-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin></Button>
+                  <Button mnemonicParsing="false" onAction="#newCarpetaBtn">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/ExploradorArchivos/icons8-add-folder-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin></Button>
+                  <TextField fx:id="busqueda" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="250.0" promptText="Busqueda">
+                     <HBox.margin>
+                        <Insets bottom="4.0" left="2.0" right="2.0" top="4.0" />
+                     </HBox.margin></TextField>
+                  <Button mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/ExploradorArchivos/icons8-search-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin></Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <content>
+            <FlowPane fx:id="flowPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: white;" />
+         </content>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </ScrollPane>
+   </center>
+</BorderPane>
