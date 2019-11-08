@@ -1,4 +1,4 @@
-package Corellium.utilidades;
+package Corellium.modelo;
 
 import java.io.File;
 import java.io.FileInputStream;

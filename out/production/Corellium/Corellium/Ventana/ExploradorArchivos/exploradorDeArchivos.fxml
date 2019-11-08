@@ -34,7 +34,7 @@
                      </graphic></Button>
                   <Button fx:id="avanzar" disable="true" mnemonicParsing="false" onAction="#avanzar">
                      <HBox.margin>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                        <Insets bottom="2.0" left="2.0" right="4.0" top="2.0" />
                      </HBox.margin>
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
@@ -47,9 +47,20 @@
                      <HBox.margin>
                         <Insets bottom="4.0" left="2.0" right="2.0" top="4.0" />
                      </HBox.margin></TextField>
+                  <Button mnemonicParsing="false" onAction="#newArchivo">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/ExploradorArchivos/icons8-add-new-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="1.5" left="7.0" right="-2.0" top="2.0" />
+                     </HBox.margin></Button>
                   <Button mnemonicParsing="false" onAction="#copiarBtn">
                      <graphic>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/ExploradorArchivos/icons8-copy-50.png" />
                            </image>
@@ -60,7 +71,7 @@
                      </HBox.margin></Button>
                   <Button mnemonicParsing="false" onAction="#pegarBtn">
                      <graphic>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/ExploradorArchivos/icons8-paste-50.png" />
                            </image>
@@ -71,25 +82,14 @@
                      </HBox.margin></Button>
                   <Button mnemonicParsing="false" onAction="#eliminarBtn">
                      <graphic>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../img/ExploradorArchivos/icons8-delete-bin-50.png" />
                            </image>
                         </ImageView>
                      </graphic>
                      <HBox.margin>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </HBox.margin></Button>
-                  <Button mnemonicParsing="false" onAction="#newCarpetaBtn">
-                     <graphic>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/ExploradorArchivos/icons8-add-folder-50.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <HBox.margin>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                        <Insets bottom="2.0" left="2.0" right="7.0" top="2.0" />
                      </HBox.margin></Button>
                   <TextField fx:id="busqueda" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="250.0" promptText="Busqueda">
                      <HBox.margin>

@@ -1,12 +1,13 @@
 package Corellium.Ventana.ExploradorArchivos;
 
-import Corellium.utilidades.CopiarArchivo;
-import Corellium.utilidades.IconoTipoArchivo;
+import Corellium.modelo.CopiarArchivo;
+import Corellium.modelo.IconoTipoArchivo;
 import Corellium.Ventana.Ventana;
 import Corellium.Ventana.VentanaAlerta;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -17,6 +18,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.control.TreeView.EditEvent;
+import javafx.stage.Stage;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -42,6 +45,8 @@ public class ExploradorDeArchivosController {
     private TextField busqueda;
     @FXML
     private FlowPane flowPane;
+
+    private Parent ventanaArchivoNuevo;
 
     private final TreeItem<File> nodoRaiz = new TreeItem<>();
 
@@ -163,11 +168,19 @@ public class ExploradorDeArchivosController {
     }
 
     @FXML
-    void newCarpetaBtn(ActionEvent event){
+    void newArchivo(ActionEvent event){
+        ventanaArchivoNuevo = Ventana.loadFXML("/Corellium/Ventana/ExploradorArchivos/nuevoArchivo.fxml",this.getClass());
 //        DialogPane root = (DialogPane) Ventana.loadFXML("/FXMLfiles/NombreArchivo.fxml", this.getClass());
 //        AnchorPane content = (AnchorPane)root.getContent();
 //        TextField tf = (TextField) content.getChildren().get(1);
 //        tf.setOnAction(value->{System.out.println(tf.getText());});
+
+        // Cerrar esta ventana cuando presione cualquier otra parte de la ventana (?)
+        // Checar linea 138, 139 para actualizar una vez creado el documento
+//        borderPane.setOnMouseClicked(mouseEvent -> {
+//            Stage stage = (Stage)ventanaArchivoNuevo.getParent().getScene().getWindow();
+//            stage.close();
+//        });
     }
 
     private void busquedaArchivo(ObservableValue<? extends String> observable,
