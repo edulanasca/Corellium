@@ -1,6 +1,7 @@
 package Corellium.Ventana.ExploradorArchivos;
 
 import Corellium.modelo.CrearArchivo;
+import Corellium.modelo.CrearIcono;
 import Corellium.modelo.IconoTipoArchivo;
 import Corellium.modelo.Tipo;
 import javafx.fxml.FXML;
@@ -11,6 +12,8 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
+import java.io.File;
 
 public class NuevoArchivoController {
 
@@ -33,6 +36,7 @@ public class NuevoArchivoController {
         if(keyEvent.getCode().equals(KeyCode.ENTER)){
             CrearArchivo.nombreArchivo = nombreArchivo.getText();
             CrearArchivo.crearArchivo(CrearArchivo.rutaActual, CrearArchivo.nombreArchivo, Tipo.CARPETA);
+            CrearIcono.crearIconoArchivos(new File(CrearArchivo.rutaActual));
             stage.close();
         } else if (keyEvent.getCode().equals(KeyCode.ESCAPE)) {
             stage.close();

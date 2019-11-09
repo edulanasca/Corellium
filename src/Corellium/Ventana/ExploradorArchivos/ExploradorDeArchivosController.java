@@ -2,29 +2,20 @@ package Corellium.Ventana.ExploradorArchivos;
 
 import Corellium.modelo.CopiarArchivo;
 import Corellium.modelo.CrearArchivo;
-import Corellium.modelo.IconoTipoArchivo;
+import Corellium.modelo.CrearIcono;
 import Corellium.Ventana.Ventana;
 import Corellium.Ventana.VentanaAlerta;
 import javafx.beans.value.ObservableValue;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.control.TreeView.EditEvent;
-import javafx.stage.Stage;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Objects;
 import java.util.Optional;
 import java.awt.Desktop;
 
@@ -47,14 +38,14 @@ public class ExploradorDeArchivosController {
     @FXML
     private FlowPane flowPane;
 
-    private final TreeItem<File> nodoRaiz = new TreeItem<>();
+    public static final TreeItem<File> nodoRaiz = new TreeItem<>();
 
-    private ArrayList<String> historialRuta = new ArrayList<>();
-    private int indice = -1;
+    public static ArrayList<String> historialRuta = new ArrayList<>();
+    public static int indice = -1;
 
     private File copiaOrigen;
-    private String nombreArchivo;
-    private boolean copiar = false;
+    public static String nombreArchivo;
+    public static boolean copiar = false;
 
     private Optional<ButtonType> opcion;
 
@@ -62,6 +53,10 @@ public class ExploradorDeArchivosController {
         ventanaSup.getChildren().add(0, Ventana.cargar("/Corellium/Ventana/barraDeTitulo.fxml", this.getClass()));
         busqueda.textProperty().addListener(this::busquedaArchivo);
         nodoRaiz();
+
+        CrearIcono.pane = flowPane;
+        CrearIcono.rutaActual = rutaActual;
+        CrearIcono.retroceder = retroceder;
     }
 
     private void nodoRaiz() {
@@ -78,7 +73,8 @@ public class ExploradorDeArchivosController {
     }
 
     @FXML
-    private void retroceder(ActionEvent event) {
+    private void retroceder() {
+        // ActionEvent: retroceder en el historial
         indice--;
         String retrocede;
 
@@ -89,11 +85,12 @@ public class ExploradorDeArchivosController {
         retrocede = historialRuta.get(indice);
         rutaActual.setText(retrocede);
         avanzar.setDisable(false);
-        crearIconoArchivos(new File(retrocede));
+        CrearIcono.crearIconoArchivos(new File(retrocede));
     }
 
     @FXML
-    private void avanzar(ActionEvent event) {
+    private void avanzar() {
+        // ActionEvent: avanzar en el historial
         indice++;
         String avanza = historialRuta.get(indice);
         rutaActual.setText(avanza);
@@ -101,11 +98,12 @@ public class ExploradorDeArchivosController {
             avanzar.setDisable(true);
         }
         retroceder.setDisable(false);
-        crearIconoArchivos(new File(avanza));
+        CrearIcono.crearIconoArchivos(new File(avanza));
     }
 
     @FXML
-    private void copiarBtn(ActionEvent event) {
+    private void copiarBtn() {
+        // ActionEvent: copiar archivo
         copiaOrigen = new File(rutaActual.getText() + nombreArchivo);
 
         if (copiaOrigen.exists()) {
@@ -125,7 +123,8 @@ public class ExploradorDeArchivosController {
     }
 
     @FXML
-    void pegarBtn(ActionEvent event) {
+    void pegarBtn() {
+        // ActionEvent: pegar archivo
         File copiaDestino = new File(rutaActual.getText() + nombreArchivo);
         opcion = VentanaAlerta.displayAlert(Alert.AlertType.CONFIRMATION, "Pegar Archivo",
                 "¿Desea pegar este archivo aquí?", this.getClass());
@@ -135,7 +134,7 @@ public class ExploradorDeArchivosController {
                 copiaDestino.getAbsolutePath())) {
 
             File actualizar = new File(rutaActual.getText());
-            crearIconoArchivos(actualizar);
+            CrearIcono.crearIconoArchivos(actualizar);
             VentanaAlerta.displayAlert(Alert.AlertType.INFORMATION, "Exito",
                     "El archivo ha sido pegado.", this.getClass());
             copiar = false;
@@ -147,7 +146,8 @@ public class ExploradorDeArchivosController {
     }
 
     @FXML
-    void eliminarBtn(ActionEvent event) {
+    void eliminarBtn() {
+        // ActionEvent: eliminar archivo
         File borrarArchivo = new File(rutaActual.getText() + nombreArchivo);
         opcion = VentanaAlerta.displayAlert(Alert.AlertType.CONFIRMATION, "Eliminar Archivo",
                 "¿Desea eliminar este archivo?", this.getClass());
@@ -157,7 +157,7 @@ public class ExploradorDeArchivosController {
             VentanaAlerta.displayAlert(Alert.AlertType.INFORMATION, "Exito",
                     "Archivo eliminado.", this.getClass());
             File cortar = new File(rutaActual.getText());
-            crearIconoArchivos(cortar);
+            CrearIcono.crearIconoArchivos(cortar);
 
         } else {
 
@@ -167,8 +167,8 @@ public class ExploradorDeArchivosController {
     }
 
     @FXML
-    void newArchivo(ActionEvent event){
-        // Boton para crear un nuevo archivo
+    void newArchivo(){
+        // ActionEvent: Crear un nuevo archivo
         Ventana.loadFXML("/Corellium/Ventana/ExploradorArchivos/nuevoArchivo.fxml", this.getClass());
         CrearArchivo.rutaActual = rutaActual.getText();
     }
@@ -181,100 +181,20 @@ public class ExploradorDeArchivosController {
         if (ficheros != null) {
             for (String name : ficheros) {
                 if (name.matches(".*(" + busqueda.getText() + ").*")) {
-                    crearIconos(name);
+                    CrearIcono.crearIconos(name);
                 }
             }
         }
     }
 
     @FXML
-    void editTree(EditEvent event) {
+    void editTree() {
+        // Enlista todos los archivos del sistema y los actualiza conforme se hagan modificaciones en estos
         TreeItem<File> nodoSeleccionado = tree.getEditingItem();
-        crearIconoArchivos(nodoSeleccionado.getValue());
+        CrearIcono.crearIconoArchivos(nodoSeleccionado.getValue());
         rutaActual.setText(nodoSeleccionado.getValue().getAbsolutePath() + "\\");
         historialRuta.add(nodoSeleccionado.getValue().getAbsolutePath() + "\\");
         indice++;
-        crearDirectorioArchivos(nodoSeleccionado);
-    }
-
-    private void crearIconoArchivos(File f) {
-        String[] ficheros = f.list();   // Se enlista todos los nombres de los archivos de la carpeta
-        if (ficheros != null) {
-            flowPane.getChildren().removeAll(flowPane.getChildren());
-            for (String name : ficheros) {
-                crearIconos(name);
-            }
-        }
-    }
-
-    private void crearIconos(String name) {
-        VBox vBox = new VBox();
-        vBox.setId("contenedor");
-        ImageView imgFile = new ImageView(IconoTipoArchivo.IconoArchivo(name));
-        imgFile.setFitHeight(90);
-        imgFile.setFitWidth(90);
-        Label nameFile = new Label(name);
-//                nameFile.setId("name");
-        vBox.getChildren().addAll(imgFile, nameFile);
-        ToggleButton newFile = new ToggleButton("", vBox);
-        newFile.setId("archivoBoton");
-        newFile.setOnMouseClicked((MouseEvent event) -> {
-            if (event.getClickCount() == 1 && !event.isConsumed()) {
-                event.consume();
-                if (!copiar) {
-                    /* Previene que nombreArchivo cambie de valor
-                               una vez el usuario ha copiado algun archivo
-                     */
-                    nombreArchivo = name;
-                }
-            } else if (event.getClickCount() == 2 && !event.isConsumed()) {
-                event.consume();
-                File newSubFile = new File(rutaActual.getText() + name);
-                if (!newSubFile.isDirectory()) {
-                    try {
-                        File objFile = new File(rutaActual.getText() + name);
-                        Desktop.getDesktop().open(objFile);
-                    } catch (IOException ex) {
-                        ex.printStackTrace();
-                    }
-                } else {
-                    rutaActual.setText(rutaActual.getText() + name + "\\");
-                    historialRuta.add(rutaActual.getText());
-                    indice++;
-
-                    retroceder.setDisable(false);
-
-                    crearIconoArchivos(newSubFile);
-                }
-            }
-
-        });
-        flowPane.getChildren().add(newFile);
-    }
-
-    private void crearDirectorioArchivos(TreeItem<File> NodoPadre) {
-        if (NodoPadre != nodoRaiz) {
-            File fraiz = new File(NodoPadre.getValue().getAbsolutePath());
-            if (fraiz.isDirectory()) {
-                if (NodoPadre.getChildren().size() > 0) {
-                    NodoPadre.getChildren().removeAll(NodoPadre.getChildren());
-                    for (File listaArchivos : Objects.requireNonNull(fraiz.listFiles())) {
-                        TreeItem<File> hijo = new TreeItem<>(listaArchivos.getAbsoluteFile());
-                        hijo.getChildren().removeAll(hijo.getChildren());
-                    }
-                }
-
-                if (fraiz.listFiles() != null) {
-                    for (File list : Objects.requireNonNull(fraiz.listFiles())) {
-                        TreeItem<File> hijo = new TreeItem<>(list.getAbsoluteFile());
-                        NodoPadre.getChildren().add(hijo);
-                        File fhijo = new File(hijo.getValue().getAbsolutePath());
-                        if (fhijo.getName().matches("(.*)\\.([a-z1-9]*)$")) {
-                            NodoPadre.getChildren().remove(hijo);
-                        }
-                    }
-                }
-            }
-        }
+        CrearArchivo.crearDirectorioArchivos(nodoSeleccionado);
     }
 }
