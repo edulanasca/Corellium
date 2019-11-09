@@ -5,10 +5,10 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Corellium.Ventana.ExploradorArchivos.NuevoArchivoController">
+<VBox fx:id="vBox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Corellium.Ventana.ExploradorArchivos.NuevoArchivoController">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" text="Nuevo Archivo" />
       <TextField fx:id="nombreArchivo" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyPressed="#crearArchivo" prefHeight="25.0" prefWidth="350.0" promptText="Nombre" />
-      <ListView fx:id="tipoArchivo" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="tipoArchivo" />
    </children>
 </VBox>

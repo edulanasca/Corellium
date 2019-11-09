@@ -1,6 +1,7 @@
 package Corellium.Ventana.ExploradorArchivos;
 
 import Corellium.modelo.CopiarArchivo;
+import Corellium.modelo.CrearArchivo;
 import Corellium.modelo.IconoTipoArchivo;
 import Corellium.Ventana.Ventana;
 import Corellium.Ventana.VentanaAlerta;
@@ -45,8 +46,6 @@ public class ExploradorDeArchivosController {
     private TextField busqueda;
     @FXML
     private FlowPane flowPane;
-
-    private Parent ventanaArchivoNuevo;
 
     private final TreeItem<File> nodoRaiz = new TreeItem<>();
 
@@ -169,18 +168,9 @@ public class ExploradorDeArchivosController {
 
     @FXML
     void newArchivo(ActionEvent event){
-        ventanaArchivoNuevo = Ventana.loadFXML("/Corellium/Ventana/ExploradorArchivos/nuevoArchivo.fxml",this.getClass());
-//        DialogPane root = (DialogPane) Ventana.loadFXML("/FXMLfiles/NombreArchivo.fxml", this.getClass());
-//        AnchorPane content = (AnchorPane)root.getContent();
-//        TextField tf = (TextField) content.getChildren().get(1);
-//        tf.setOnAction(value->{System.out.println(tf.getText());});
-
-        // Cerrar esta ventana cuando presione cualquier otra parte de la ventana (?)
-        // Checar linea 138, 139 para actualizar una vez creado el documento
-//        borderPane.setOnMouseClicked(mouseEvent -> {
-//            Stage stage = (Stage)ventanaArchivoNuevo.getParent().getScene().getWindow();
-//            stage.close();
-//        });
+        // Boton para crear un nuevo archivo
+        Ventana.loadFXML("/Corellium/Ventana/ExploradorArchivos/nuevoArchivo.fxml", this.getClass());
+        CrearArchivo.rutaActual = rutaActual.getText();
     }
 
     private void busquedaArchivo(ObservableValue<? extends String> observable,
