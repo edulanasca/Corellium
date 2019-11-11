@@ -9,6 +9,6 @@
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" text="Nuevo Archivo" />
       <TextField fx:id="nombreArchivo" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyPressed="#crearArchivo" prefHeight="25.0" prefWidth="350.0" promptText="Nombre" />
-      <ListView fx:id="tipoArchivo" />
+      <ListView fx:id="tipoArchivo" onKeyPressed="#crearArchivo" />
    </children>
 </VBox>

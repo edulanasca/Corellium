@@ -8,7 +8,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 
-public class IconoTipoArchivo {
+public class CrearIconos {
 
     private static String rutaIcono = "/Corellium/img/ExploradorArchivos/TipoArchivo/";
     private static String rutaIconoNuevoArchivo = "/Corellium/img/ExploradorArchivos/TipoArchivo/NuevoArchivo/";

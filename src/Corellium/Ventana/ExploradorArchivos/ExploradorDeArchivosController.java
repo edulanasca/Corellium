@@ -2,7 +2,7 @@ package Corellium.Ventana.ExploradorArchivos;
 
 import Corellium.modelo.CopiarArchivo;
 import Corellium.modelo.CrearArchivo;
-import Corellium.modelo.CrearIcono;
+import Corellium.modelo.ListarArchivos;
 import Corellium.Ventana.Ventana;
 import Corellium.Ventana.VentanaAlerta;
 import javafx.beans.value.ObservableValue;
@@ -54,9 +54,9 @@ public class ExploradorDeArchivosController {
         busqueda.textProperty().addListener(this::busquedaArchivo);
         nodoRaiz();
 
-        CrearIcono.pane = flowPane;
-        CrearIcono.rutaActual = rutaActual;
-        CrearIcono.retroceder = retroceder;
+        ListarArchivos.pane = flowPane;
+        ListarArchivos.rutaActual = rutaActual;
+        ListarArchivos.retroceder = retroceder;
     }
 
     private void nodoRaiz() {
@@ -85,7 +85,7 @@ public class ExploradorDeArchivosController {
         retrocede = historialRuta.get(indice);
         rutaActual.setText(retrocede);
         avanzar.setDisable(false);
-        CrearIcono.crearIconoArchivos(new File(retrocede));
+        ListarArchivos.crearIconoArchivos(new File(retrocede));
     }
 
     @FXML
@@ -98,7 +98,7 @@ public class ExploradorDeArchivosController {
             avanzar.setDisable(true);
         }
         retroceder.setDisable(false);
-        CrearIcono.crearIconoArchivos(new File(avanza));
+        ListarArchivos.crearIconoArchivos(new File(avanza));
     }
 
     @FXML
@@ -134,7 +134,7 @@ public class ExploradorDeArchivosController {
                 copiaDestino.getAbsolutePath())) {
 
             File actualizar = new File(rutaActual.getText());
-            CrearIcono.crearIconoArchivos(actualizar);
+            ListarArchivos.crearIconoArchivos(actualizar);
             VentanaAlerta.displayAlert(Alert.AlertType.INFORMATION, "Exito",
                     "El archivo ha sido pegado.", this.getClass());
             copiar = false;
@@ -157,7 +157,7 @@ public class ExploradorDeArchivosController {
             VentanaAlerta.displayAlert(Alert.AlertType.INFORMATION, "Exito",
                     "Archivo eliminado.", this.getClass());
             File cortar = new File(rutaActual.getText());
-            CrearIcono.crearIconoArchivos(cortar);
+            ListarArchivos.crearIconoArchivos(cortar);
 
         } else {
 
@@ -169,8 +169,8 @@ public class ExploradorDeArchivosController {
     @FXML
     void newArchivo(){
         // ActionEvent: Crear un nuevo archivo
-        Ventana.loadFXML("/Corellium/Ventana/ExploradorArchivos/nuevoArchivo.fxml", this.getClass());
         CrearArchivo.rutaActual = rutaActual.getText();
+        Ventana.loadFXML("/Corellium/Ventana/ExploradorArchivos/nuevoArchivo.fxml", this.getClass());
     }
 
     private void busquedaArchivo(ObservableValue<? extends String> observable,
@@ -181,7 +181,7 @@ public class ExploradorDeArchivosController {
         if (ficheros != null) {
             for (String name : ficheros) {
                 if (name.matches(".*(" + busqueda.getText() + ").*")) {
-                    CrearIcono.crearIconos(name);
+                    ListarArchivos.crearIconos(name);
                 }
             }
         }
@@ -191,7 +191,7 @@ public class ExploradorDeArchivosController {
     void editTree() {
         // Enlista todos los archivos del sistema y los actualiza conforme se hagan modificaciones en estos
         TreeItem<File> nodoSeleccionado = tree.getEditingItem();
-        CrearIcono.crearIconoArchivos(nodoSeleccionado.getValue());
+        ListarArchivos.crearIconoArchivos(nodoSeleccionado.getValue());
         rutaActual.setText(nodoSeleccionado.getValue().getAbsolutePath() + "\\");
         historialRuta.add(nodoSeleccionado.getValue().getAbsolutePath() + "\\");
         indice++;

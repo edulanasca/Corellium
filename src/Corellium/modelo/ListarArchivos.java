@@ -14,8 +14,9 @@ import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
 
-public class CrearIcono {
+public class ListarArchivos {
 
+    // Todos los atributos se obtienen de ExploradorDeArchivosController
     public static Pane pane;
     public static TextField rutaActual;
     public static Button retroceder;
@@ -33,7 +34,7 @@ public class CrearIcono {
     public static void crearIconos(String name) {
         VBox vBox = new VBox();
         vBox.setId("contenedor");
-        ImageView imgFile = new ImageView(IconoTipoArchivo.IconoArchivo(name));
+        ImageView imgFile = new ImageView(CrearIconos.IconoArchivo(name));
         imgFile.setFitHeight(90);
         imgFile.setFitWidth(90);
         Label nameFile = new Label(name);
