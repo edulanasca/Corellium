@@ -5,6 +5,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.control.Button;
@@ -67,6 +68,14 @@ public class ListarArchivos {
                     crearIconoArchivos(newSubFile);
                 }
             }
+
+            newFile.setOnKeyPressed(keyEvent -> {
+                if(keyEvent.getCode().equals(KeyCode.DELETE)) {
+                    File borrarArchivo = new File(rutaActual.getText() + ExploradorDeArchivosController.nombreArchivo);
+                    Desktop.getDesktop().moveToTrash(borrarArchivo);
+                    ListarArchivos.crearIconoArchivos(new File(rutaActual.getText()));
+                }
+            });
         });
         pane.getChildren().add(newFile);
     }
