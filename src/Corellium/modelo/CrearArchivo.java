@@ -1,7 +1,8 @@
 package Corellium.modelo;
 
 import Corellium.Ventana.ExploradorArchivos.ExploradorDeArchivosController;
-import javafx.scene.control.ListView;
+import Corellium.Ventana.VentanaAlerta;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TreeItem;
 
 import java.io.File;
@@ -9,8 +10,6 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class CrearArchivo {
-
-    public static ListView<Tipo> listaArchivos;
 
     public static String rutaActual;
 
@@ -41,31 +40,33 @@ public class CrearArchivo {
         }
     }
 
-    public static void crearArchivo(String rutaActual, String nombreArchivo, Tipo tipoArchivo) {
+    public static void crearArchivo(String nombreArchivo, Tipo tipoArchivo) throws IOException{
         // Crear un archivo del tipo Tipo especificado, el nombreArchivo lo obtiene de NuevoArchivoController
         // y la rutaActual de ExploradorDeArchivosController
         String ruta = rutaActual + nombreArchivo;
         File file = new File(ruta);
+        boolean carpeta = false;
 
         if(tipoArchivo.equals(Tipo.CARPETA)) {
             file = new File(ruta);
-            if(file.mkdir()) {
-                System.out.println("Carpetita");
-            }
+            carpeta = true;
+            if(!file.mkdir()) {  throw new IOException(); }
         } else if(tipoArchivo.equals(Tipo.TEXTO)) {
             file = new File(ruta + ".txt");
         } else if(tipoArchivo.equals(Tipo.WORD)) {
             file = new File(ruta + ".docx");
         } else if(tipoArchivo.equals(Tipo.POWERPOINT)) {
             file = new File(ruta + ".pptx");
+        } else if(tipoArchivo.equals(Tipo.RAR)) {
+            file = new File(ruta + ".rar");
+        } else if(tipoArchivo.equals(Tipo.ZIP)) {
+            file = new File(ruta + ".zip");
         }
 
-        try {
-            if(file.createNewFile()) {
-                System.out.println("Creado");
+        if(!carpeta) {
+            if (!file.createNewFile()) {
+                throw new IOException();
             }
-        } catch (IOException ex) {
-            ex.printStackTrace();
         }
     }
 }

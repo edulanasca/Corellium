@@ -30,6 +30,9 @@ public class CrearIconos {
                     if(name.equals(Tipo.CARPETA)) {
                         setText("Carpeta");
                         imageView.setImage(new Image(rutaIconoNuevoArchivo + "icons8-carpeta-25.png"));
+                    } else if(name.equals(Tipo.TEXTO)) {
+                        setText("Documento de texto");
+                        imageView.setImage(new Image((rutaIconoNuevoArchivo + "notes-25.png")));
                     } else if(name.equals(Tipo.WORD)) {
                         setText("Documento de Microsoft Word");
                         imageView.setImage(new Image(rutaIconoNuevoArchivo + "icons8-word-25.png"));
@@ -39,14 +42,22 @@ public class CrearIconos {
                     } else if(name.equals(Tipo.EXCEL)){
                         setText("Hoja de cálculo de Microsoft Excel");
                         imageView.setImage(new Image(rutaIconoNuevoArchivo + "icons8-excel-25.png"));
+                    } else if(name.equals(Tipo.RAR)) {
+                        setText("Archivo WinRAR");
+                        imageView.setImage(new Image(rutaIcono + "icons8-winrar-90.png"));
+                    } else if(name.equals(Tipo.ZIP)) {
+                        setText("Archivo WinRAR ZIP");
+                        imageView.setImage(new Image(rutaIcono + "icons8-winrar-90.png"));
                     }
+                    imageView.setFitHeight(25);
+                    imageView.setFitWidth(25);
                     setGraphic(imageView);
                 }
             }
         });
     }
 
-    public static String IconoArchivo(String nombreArchivo) {
+    static String IconoArchivo(String nombreArchivo) {
         // Iconos de los archivos que se muestran mientras se navega por el explorador de Archivos
         String[] listaN = nombreArchivo.split("\\.");
 

@@ -5,5 +5,7 @@ public enum Tipo {
     TEXTO,
     WORD,
     POWERPOINT,
-    EXCEL
+    EXCEL,
+    RAR,
+    ZIP
 }

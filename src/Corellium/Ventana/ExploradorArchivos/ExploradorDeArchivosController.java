@@ -57,6 +57,7 @@ public class ExploradorDeArchivosController {
         ListarArchivos.pane = flowPane;
         ListarArchivos.rutaActual = rutaActual;
         ListarArchivos.retroceder = retroceder;
+        ListarArchivos.crearIconoArchivos(new File("D:\\"));
     }
 
     private void nodoRaiz() {
@@ -107,15 +108,14 @@ public class ExploradorDeArchivosController {
         copiaOrigen = new File(rutaActual.getText() + nombreArchivo);
 
         if (copiaOrigen.exists()) {
-
             opcion = VentanaAlerta.displayAlert(Alert.AlertType.CONFIRMATION, "Copiar Archivo",
                     "¿Desea copiar este archivo?", this.getClass());
+
             if (opcion.isPresent() && opcion.get() == ButtonType.OK) {
                 copiar = true;
                 VentanaAlerta.displayAlert(Alert.AlertType.INFORMATION, "Exito",
                         "El archivo ha sido copiado.", this.getClass());
             }
-
         } else {
             VentanaAlerta.displayAlert(Alert.AlertType.ERROR, "Error",
                     "Seleccione un archivo.", this.getClass());
@@ -130,16 +130,13 @@ public class ExploradorDeArchivosController {
                 "¿Desea pegar este archivo aquí?", this.getClass());
 
         if ((opcion.isPresent() && opcion.get() == ButtonType.OK) &&
-                CopiarArchivo.getInstance().copiar(copiaOrigen.getAbsolutePath(),
-                copiaDestino.getAbsolutePath())) {
+                CopiarArchivo.getInstance().copiar(copiaOrigen.getAbsolutePath(), copiaDestino.getAbsolutePath())) {
 
-            File actualizar = new File(rutaActual.getText());
-            ListarArchivos.crearIconoArchivos(actualizar);
+            ListarArchivos.crearIconoArchivos(new File(rutaActual.getText()));
             VentanaAlerta.displayAlert(Alert.AlertType.INFORMATION, "Exito",
                     "El archivo ha sido pegado.", this.getClass());
             copiar = false;
         } else {
-
             VentanaAlerta.displayAlert(Alert.AlertType.ERROR, "Error",
                     "Hubo un error al pegar el archivo.", this.getClass());
         }
@@ -151,16 +148,12 @@ public class ExploradorDeArchivosController {
         File borrarArchivo = new File(rutaActual.getText() + nombreArchivo);
         opcion = VentanaAlerta.displayAlert(Alert.AlertType.CONFIRMATION, "Eliminar Archivo",
                 "¿Desea eliminar este archivo?", this.getClass());
-        if ((opcion.isPresent() && opcion.get() == ButtonType.OK)
-                && Desktop.getDesktop().moveToTrash(borrarArchivo)) {
 
+        if ((opcion.isPresent() && opcion.get() == ButtonType.OK) && Desktop.getDesktop().moveToTrash(borrarArchivo)) {
+            ListarArchivos.crearIconoArchivos(new File(rutaActual.getText()));
             VentanaAlerta.displayAlert(Alert.AlertType.INFORMATION, "Exito",
                     "Archivo eliminado.", this.getClass());
-            File cortar = new File(rutaActual.getText());
-            ListarArchivos.crearIconoArchivos(cortar);
-
         } else {
-
             VentanaAlerta.displayAlert(Alert.AlertType.ERROR, "Error",
                     "Hubo un error al eliminar el archivo.", this.getClass());
         }

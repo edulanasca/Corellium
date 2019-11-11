@@ -66,12 +66,12 @@
 }
 
 .list-cell:filled:hover {
-    -fx-background-color:  #131820;
+    -fx-background-color: #131820;
     -fx-text-fill: white;
 }
 
 .list-cell:filled:selected:focused, .list-cell:filled:selected {
-    -fx-background-color:  #F5B612;
+    -fx-background-color: #F5B612;
     -fx-text-fill: #1D1D1D;
 }
 
