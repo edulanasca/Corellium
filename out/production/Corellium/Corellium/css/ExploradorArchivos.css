@@ -1,5 +1,4 @@
 .superior{
-    /*-fx-background-color: #6B8E23;*/
     -fx-background-color: #7aa329;
 }
 
@@ -29,7 +28,6 @@
 
 #archivoBoton:hover{
     -fx-background-color: #ccf2ff;
-    /*-fx-background-color: linear-gradient(to top, #ffba66 0%, #ffddb3 100%);*/
 }
 
 #archivoBoton:selected{
