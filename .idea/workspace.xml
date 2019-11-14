@@ -2,7 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Corellium/modelo/ListarArchivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/modelo/ListarArchivos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_codec_1_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/Ventana/FondoDinamico.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Juegos/Buscaminas/BuscaminasController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Juegos/Buscaminas/Casillero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Juegos/Buscaminas/PanelBuscaminas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Juegos/Buscaminas/buscaminas.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Juegos/Pingpong/Control.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Juegos/Pingpong/PingpongController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Juegos/Pingpong/ResizableCanvas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Juegos/Pingpong/pingPong.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Web/DescargasController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Web/descargas.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Web/modelo/DescargarArchivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Corellium.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Corellium.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Escritorio/BarraDeTareasController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Escritorio/EscritorioController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Escritorio/barraDeTareas.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Escritorio/escritorio.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/BarraDeTituloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/BarraDeTituloController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/ExploradorArchivos/ExploradorDeArchivosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/ExploradorArchivos/ExploradorDeArchivosController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/ExploradorArchivos/NuevoArchivoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/ExploradorArchivos/NuevoArchivoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Ventana.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Ventana.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Web/WebController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Web/WebController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/css/ExploradorArchivos.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/css/ExploradorArchivos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/modelo/CopiarArchivo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/modelo/CrearArchivo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/modelo/CrearIconos$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/modelo/CrearIconos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/modelo/ListarArchivos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/modelo/Tipo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/Escritorio/BarraDeTareasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Escritorio/BarraDeTareasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/Escritorio/EscritorioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Escritorio/EscritorioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/Escritorio/barraDeTareas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Escritorio/barraDeTareas.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/Escritorio/escritorio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Escritorio/escritorio.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/BarraDeTituloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/BarraDeTituloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/ExploradorArchivos/ExploradorDeArchivosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/ExploradorArchivos/ExploradorDeArchivosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/ExploradorArchivos/NuevoArchivoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/ExploradorArchivos/NuevoArchivoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Ventana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/Web/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Web/WebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/modelo/CopiarArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/ExploradorArchivos/modelo/CopiarArchivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/modelo/CrearArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/ExploradorArchivos/modelo/CrearArchivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/modelo/CrearIconos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/ExploradorArchivos/modelo/CrearIconos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/modelo/ListarArchivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/ExploradorArchivos/modelo/ListarArchivos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/modelo/Tipo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/ExploradorArchivos/modelo/Tipo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module-info.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,8 +108,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="module-info" />
-        <option value="FxmlFile" />
         <option value="Enum" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -78,8 +128,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/Corellium/modelo/CrearArchivo.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Corellium/modelo/ListarArchivos.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Corellium/Ventana/ExploradorArchivos/modelo/ListarArchivos.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Corellium/Ventana/ExploradorArchivos/modelo/CrearArchivo.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectId" id="1T41bik3DT0aWhSnnskIdbXjxSp" />
@@ -104,17 +154,26 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Corellium/css" />
-    <property name="project.structure.last.edited" value="Facets" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/SceneBuilder.lnk" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\css" />
+      <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\img\Escritorio" />
+      <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\Ventana" />
+      <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\Escritorio" />
+      <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="Corellium.Ventana" />
+      <recent name="Corellium.Ventana.ExploradorArchivos" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\img\ExploradorArchivos" />
@@ -122,13 +181,6 @@
       <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\img\Web\barraSuperior" />
       <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\img\Escritorio\bottom" />
       <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\img\Ventana" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\css" />
-      <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\img\Escritorio" />
-      <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\Ventana" />
-      <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\Escritorio" />
-      <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -168,7 +220,7 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Corellium.Escritorio.*" />
+          <option name="PATTERN" value="Corellium.Ventana.Escritorio.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -227,11 +279,14 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
+      <workItem from="1573609994370" duration="22753000" />
+      <workItem from="1573655122984" duration="11890000" />
+      <workItem from="1573696123441" duration="909000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1302000" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />

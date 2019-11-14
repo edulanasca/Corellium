@@ -14,6 +14,9 @@ public class Ventana {
 
     private static double xOffset = 0;
     private static double yOffset = 0;
+    private static Parent barraTitulo;
+
+    private Ventana() { }
 
     public static Parent cargar(String fxml, Class clase) {
         try {
@@ -58,5 +61,17 @@ public class Ventana {
             ex.getStackTrace();
             return null;
         }
+    }
+
+    public static Parent barraTitulo(Class clase) {
+        if(barraTitulo == null) {
+            try {
+                barraTitulo = FXMLLoader.load(clase.getResource("/Corellium/Ventana/barraDeTitulo.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return barraTitulo;
     }
 }

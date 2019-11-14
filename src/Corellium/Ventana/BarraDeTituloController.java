@@ -12,12 +12,8 @@ public class BarraDeTituloController {
     HBox hBox;
 
 //    BorderPane escritorio;
-    Parent barraDeTareas = Ventana.cargar("/Corellium/Escritorio/barraDeTareas.fxml", this.getClass());
+    Parent barraDeTareas = Ventana.cargar("/Corellium/Ventana/Escritorio/barraDeTareas.fxml", this.getClass());
 
-    @FXML
-    public void initialize() {
-//        escritorio = (BorderPane)hBox.getScene().getRoot();
-    }
 
     @FXML
     void cerrarVentana(MouseEvent event) {
