@@ -1,8 +1,8 @@
 package Corellium.Ventana.ExploradorArchivos;
 
-import Corellium.modelo.CopiarArchivo;
-import Corellium.modelo.CrearArchivo;
-import Corellium.modelo.ListarArchivos;
+import Corellium.Ventana.ExploradorArchivos.modelo.CopiarArchivo;
+import Corellium.Ventana.ExploradorArchivos.modelo.CrearArchivo;
+import Corellium.Ventana.ExploradorArchivos.modelo.ListarArchivos;
 import Corellium.Ventana.Ventana;
 import Corellium.Ventana.VentanaAlerta;
 import javafx.beans.value.ObservableValue;
@@ -50,10 +50,9 @@ public class ExploradorDeArchivosController {
     private Optional<ButtonType> opcion;
 
     public void initialize() {
-        ventanaSup.getChildren().add(0, Ventana.cargar("/Corellium/Ventana/barraDeTitulo.fxml", this.getClass()));
+        ventanaSup.getChildren().add(0, Ventana.barraTitulo(this.getClass()));
         busqueda.textProperty().addListener(this::busquedaArchivo);
         nodoRaiz();
-
         ListarArchivos.pane = flowPane;
         ListarArchivos.rutaActual = rutaActual;
         ListarArchivos.retroceder = retroceder;

@@ -10,8 +10,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/Corellium/Escritorio/escritorio.fxml"));
-//        Parent root = FXMLLoader.load(getClass().getResource("/Corellium/Ventana/Web/web.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/Corellium/Ventana/Escritorio/escritorio.fxml"));
+//        Parent root = FXMLLoader.load(getClass().getResource("/Corellium/Ventana/Juegos/Pingpong/pingPong.fxml"));
         primaryStage.setTitle("Corellium v0.1");
         primaryStage.setScene(new Scene(root));
         primaryStage.setMaximized(true);

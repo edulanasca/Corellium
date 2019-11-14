@@ -3,13 +3,16 @@ package Corellium.Ventana.Web;
 import Corellium.Ventana.Ventana;
 import javafx.concurrent.Worker;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.web.WebEvent;
 import javafx.scene.web.WebHistory;
 import javafx.scene.web.WebView;
 
@@ -45,7 +48,7 @@ public class WebController {
 
     @FXML
     public void initialize() {
-        barraSuperior.getChildren().add(0, Ventana.cargar("/Corellium/Ventana/barraDeTitulo.fxml", this.getClass()));
+        barraSuperior.getChildren().add(0, Ventana.barraTitulo(this.getClass()));
         cargarDeHistorial();
         // Al iniciar el navegador o seleccionar el Tab añadir pestaña los botones se desactivan
         tabPane.getSelectionModel().selectedItemProperty().addListener((ov, oldState, newState) -> {
@@ -94,6 +97,7 @@ public class WebController {
                 WebView pagWeb = (WebView)pst.getContent();
                 pagWeb.getEngine().setJavaScriptEnabled(true);
                 if (event.getSource().equals(dirURL)){
+                    System.out.println(dirURL.getText());
                     busquedaURL(pagWeb);
                 } else if (event.getSource().equals(busqueda)) {
                     pagWeb.getEngine().load("https://www.google.com/search?q=" + busqueda.getText().replaceAll(" ","+"));
@@ -152,6 +156,7 @@ public class WebController {
         // Añade una nueva página web, si el url es "Home" se carga buscador predeterminado
         Tab nuevaPst = new Tab();
         WebView pagWeb = new WebView();
+        pagWeb.getEngine().setJavaScriptEnabled(true);
         nuevaPst.setContent(pagWeb); // Añade el WebView a la pestaña
         nuevaPst.setClosable(true); // Habilita el cerrar la pestaña
 
@@ -186,7 +191,7 @@ public class WebController {
         } else if (dirURL.getText().isEmpty()) {
             webView.getEngine().load("https://www.google.com.pe");
         } else {
-            webView.getEngine().load("https://www.google.com/search?q=" + dirURL.getText().replaceAll(" ", "+"));
+            webView.getEngine().load("https://www.google.com/searchq?=" + dirURL.getText().replaceAll(" ", "+"));
         }
     }
 

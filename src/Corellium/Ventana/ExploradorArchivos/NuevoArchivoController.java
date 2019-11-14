@@ -1,10 +1,10 @@
 package Corellium.Ventana.ExploradorArchivos;
 
 import Corellium.Ventana.VentanaAlerta;
-import Corellium.modelo.CrearArchivo;
-import Corellium.modelo.ListarArchivos;
-import Corellium.modelo.CrearIconos;
-import Corellium.modelo.Tipo;
+import Corellium.Ventana.ExploradorArchivos.modelo.CrearArchivo;
+import Corellium.Ventana.ExploradorArchivos.modelo.ListarArchivos;
+import Corellium.Ventana.ExploradorArchivos.modelo.CrearIconos;
+import Corellium.Ventana.ExploradorArchivos.modelo.Tipo;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ListView;
