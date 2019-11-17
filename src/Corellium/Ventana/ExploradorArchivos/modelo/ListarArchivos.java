@@ -45,6 +45,7 @@ public class ListarArchivos {
         newFile.setOnMouseClicked(event -> {
             if(event.getClickCount() == 1 && !event.isConsumed()) {
                 event.consume();
+                // eliminado <- static
                 if(!ExploradorDeArchivosController.copiar) {
                     ExploradorDeArchivosController.nombreArchivo = name;
                 }
@@ -59,6 +60,7 @@ public class ListarArchivos {
                         ex.printStackTrace();
                     }
                 } else {
+                    // Actualiza la ruta
                     rutaActual.setText(rutaActual.getText() + name + "\\");
                     ExploradorDeArchivosController.historialRuta.add(rutaActual.getText());
                     ExploradorDeArchivosController.indice++;

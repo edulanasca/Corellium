@@ -11,9 +11,9 @@ public class CrearArchivo {
 
     public static String rutaActual;
 
-    public static void crearDirectorioArchivos(TreeItem<File> NodoPadre) {
+    public static void crearDirectorioArchivos(TreeItem<File> NodoPadre, TreeItem<File> nodoRaiz) {
         // Crea el arbol de archivos del sistema
-        if (NodoPadre != ExploradorDeArchivosController.nodoRaiz) {
+        if (NodoPadre != nodoRaiz) {
             File fraiz = new File(NodoPadre.getValue().getAbsolutePath());
             if (fraiz.isDirectory()) {
                 if (NodoPadre.getChildren().size() > 0) {

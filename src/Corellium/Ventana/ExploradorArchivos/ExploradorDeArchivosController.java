@@ -38,7 +38,7 @@ public class ExploradorDeArchivosController {
     @FXML
     private FlowPane flowPane;
 
-    public static final TreeItem<File> nodoRaiz = new TreeItem<>();
+    private TreeItem<File> nodoRaiz = new TreeItem<>();
 
     public static ArrayList<String> historialRuta = new ArrayList<>();
     public static int indice = -1;
@@ -53,6 +53,7 @@ public class ExploradorDeArchivosController {
         ventanaSup.getChildren().add(0, Ventana.barraTitulo(this.getClass()));
         busqueda.textProperty().addListener(this::busquedaArchivo);
         nodoRaiz();
+        rutaActual.setText("D:\\");
         ListarArchivos.pane = flowPane;
         ListarArchivos.rutaActual = rutaActual;
         ListarArchivos.retroceder = retroceder;
@@ -67,6 +68,8 @@ public class ExploradorDeArchivosController {
             TreeItem<File> f = new TreeItem<>(listRoot);
             nodoRaiz.getChildren().add(f);
         }
+        File papelera = new File("src/Corellium/Papelera");
+        nodoRaiz.getChildren().add(new TreeItem<>(papelera.getAbsoluteFile()));
         nodoRaiz.setExpanded(true);
         tree.setRoot(nodoRaiz);
         tree.setEditable(true);
@@ -144,14 +147,17 @@ public class ExploradorDeArchivosController {
     @FXML
     void eliminarBtn() {
         // ActionEvent: eliminar archivo
-        File borrarArchivo = new File(rutaActual.getText() + nombreArchivo);
+        copiaOrigen = new File(rutaActual.getText() + nombreArchivo);
+        File papelera = new File("src/Corellium/Papelera");
         opcion = VentanaAlerta.displayAlert(Alert.AlertType.CONFIRMATION, "Eliminar Archivo",
                 "¿Desea eliminar este archivo?", this.getClass());
-
-        if ((opcion.isPresent() && opcion.get() == ButtonType.OK) && Desktop.getDesktop().moveToTrash(borrarArchivo)) {
-            ListarArchivos.crearIconoArchivos(new File(rutaActual.getText()));
-            VentanaAlerta.displayAlert(Alert.AlertType.INFORMATION, "Exito",
-                    "Archivo eliminado.", this.getClass());
+        if ((opcion.isPresent() && opcion.get() == ButtonType.OK)) {
+            CopiarArchivo.getInstance().copiar(copiaOrigen.getAbsolutePath(),papelera.getAbsolutePath()+ "/" + nombreArchivo);
+            if(copiaOrigen.delete()) {
+                ListarArchivos.crearIconoArchivos(new File(rutaActual.getText()));
+                VentanaAlerta.displayAlert(Alert.AlertType.INFORMATION, "Exito",
+                        "Archivo eliminado.", this.getClass());
+            }
         } else {
             VentanaAlerta.displayAlert(Alert.AlertType.ERROR, "Error",
                     "Hubo un error al eliminar el archivo.", this.getClass());
@@ -187,6 +193,6 @@ public class ExploradorDeArchivosController {
         rutaActual.setText(nodoSeleccionado.getValue().getAbsolutePath() + "\\");
         historialRuta.add(nodoSeleccionado.getValue().getAbsolutePath() + "\\");
         indice++;
-        CrearArchivo.crearDirectorioArchivos(nodoSeleccionado);
+        CrearArchivo.crearDirectorioArchivos(nodoSeleccionado, nodoRaiz);
     }
 }
