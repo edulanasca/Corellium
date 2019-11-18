@@ -7,17 +7,19 @@ module Corellium {
     requires org.jetbrains.annotations;
 
     opens Corellium;
-    opens Corellium.Ventana;
-    opens Corellium.Ventana.Calculadora;
-    opens Corellium.Ventana.Escritorio;
-    opens Corellium.Ventana.Web;
-    opens Corellium.Ventana.Juegos.Pingpong;
-    opens Corellium.Ventana.ExploradorArchivos;
-    opens Corellium.Ventana.ExploradorArchivos.modelo;
     opens Corellium.img.Escritorio;
     opens Corellium.img.Escritorio.barraDeTareas;
     opens Corellium.img.ExploradorArchivos;
     opens Corellium.img.ExploradorArchivos.TipoArchivo;
     opens Corellium.img.ExploradorArchivos.TipoArchivo.NuevoArchivo;
-    opens Corellium.Papelera;
+    opens Corellium.img.Papelera;
+    opens Corellium.Ventana;
+    opens Corellium.Ventana.Calculadora;
+    opens Corellium.Ventana.Escritorio;
+    opens Corellium.Ventana.Escritorio.Default;
+    opens Corellium.Ventana.Web;
+    opens Corellium.Ventana.Juegos.Pingpong;
+    opens Corellium.Ventana.Papelera;
+    opens Corellium.Ventana.ExploradorArchivos;
+    opens Corellium.Ventana.ExploradorArchivos.modelo;
 }

@@ -1,14 +1,14 @@
 package Corellium.Ventana.ExploradorArchivos.modelo;
 
 import Corellium.Ventana.ExploradorArchivos.ExploradorDeArchivosController;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleButton;
+import Corellium.Ventana.Papelera.ArchivoBorrado;
+import Corellium.Ventana.Papelera.PapeleraController;
+import Corellium.Ventana.VentanaAlerta;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import javafx.scene.control.Button;
 
 
 import java.awt.Desktop;
@@ -18,12 +18,16 @@ import java.io.IOException;
 public class ListarArchivos {
 
     // Todos los atributos se obtienen de ExploradorDeArchivosController
-    public static Pane pane;
+    public static Pane pane;    // flowPane para mostrar los archivos
     public static TextField rutaActual;
     public static Button retroceder;
 
+    /**
+     * Enlista todos los archivos del directorio en un flowPane
+     * @param f Directorio
+     */
     public static void crearIconoArchivos(File f) {
-        String[] ficheros = f.list();   // Se enlista todos los nombres de los archivos de la carpeta
+        String[] ficheros = f.list();
         if(ficheros != null) {
             pane.getChildren().removeAll(pane.getChildren());
             for(String name: ficheros) {
@@ -32,6 +36,10 @@ public class ListarArchivos {
         }
     }
 
+    /**
+     * Crear los iconos de cada
+     * @param name nombre del fichero del directorio
+     */
     public static void crearIconos(String name) {
         VBox vBox = new VBox();
         vBox.setId("contenedor");
@@ -73,9 +81,22 @@ public class ListarArchivos {
 
             newFile.setOnKeyPressed(keyEvent -> {
                 if(keyEvent.getCode().equals(KeyCode.DELETE)) {
-                    File borrarArchivo = new File(rutaActual.getText() + ExploradorDeArchivosController.nombreArchivo);
-                    Desktop.getDesktop().moveToTrash(borrarArchivo);
-                    ListarArchivos.crearIconoArchivos(new File(rutaActual.getText()));
+                    File papelera = new File("src/Corellium/Papelera");
+                    if(rutaActual != null) {
+                        File borrarArchivo = new File(rutaActual.getText() + ExploradorDeArchivosController.nombreArchivo);
+                        if(!rutaActual.getText().equals("")){
+                            String origen = borrarArchivo.getAbsolutePath();
+                            CopiarArchivo.getInstance().copiar(origen, papelera.getAbsolutePath() + "/" + borrarArchivo.getName());
+                            PapeleraController.ficherosBorrados.add(new ArchivoBorrado(origen, borrarArchivo.getName()));
+                            if (borrarArchivo.delete()) ListarArchivos.crearIconoArchivos(new File(rutaActual.getText()));
+                        } else {
+                            File f = new File(papelera.getAbsolutePath() + "/" + name);
+                            if (f.delete()) ListarArchivos.crearIconoArchivos(papelera);
+                        }
+                    } else {
+                        File f = new File(papelera.getAbsolutePath() + "/" + name);
+                        if (f.delete()) ListarArchivos.crearIconoArchivos(papelera);
+                    }
                 }
             });
         });

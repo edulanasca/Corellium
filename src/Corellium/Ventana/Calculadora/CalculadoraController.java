@@ -169,11 +169,6 @@ public class CalculadoraController {
             entradaNumero.clear();
             Operaciones.listaOperaciones.add(operador);
             entradaOperaciones.appendText(" " + numero + " " + operador);
-//            if(!operadorUnico) {
-//                entradaOperaciones.appendText(" " + numero + " " + operador);
-//            } else {
-//                entradaOperaciones.appendText(" " + operador);
-//            }
         }
     }
 

@@ -1,5 +1,7 @@
 package Corellium.Ventana.ExploradorArchivos;
 
+import Corellium.Ventana.Papelera.ArchivoBorrado;
+import Corellium.Ventana.Papelera.PapeleraController;
 import Corellium.Ventana.ExploradorArchivos.modelo.CopiarArchivo;
 import Corellium.Ventana.ExploradorArchivos.modelo.CrearArchivo;
 import Corellium.Ventana.ExploradorArchivos.modelo.ListarArchivos;
@@ -14,10 +16,9 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 
-import java.io.File;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Optional;
-import java.awt.Desktop;
 
 public class ExploradorDeArchivosController {
 
@@ -152,7 +153,9 @@ public class ExploradorDeArchivosController {
         opcion = VentanaAlerta.displayAlert(Alert.AlertType.CONFIRMATION, "Eliminar Archivo",
                 "¿Desea eliminar este archivo?", this.getClass());
         if ((opcion.isPresent() && opcion.get() == ButtonType.OK)) {
-            CopiarArchivo.getInstance().copiar(copiaOrigen.getAbsolutePath(),papelera.getAbsolutePath()+ "/" + nombreArchivo);
+            String origen = copiaOrigen.getAbsolutePath();
+            CopiarArchivo.getInstance().copiar(origen,papelera.getAbsolutePath()+ "/" + nombreArchivo);
+            PapeleraController.ficherosBorrados.add(new ArchivoBorrado(origen, nombreArchivo));
             if(copiaOrigen.delete()) {
                 ListarArchivos.crearIconoArchivos(new File(rutaActual.getText()));
                 VentanaAlerta.displayAlert(Alert.AlertType.INFORMATION, "Exito",
