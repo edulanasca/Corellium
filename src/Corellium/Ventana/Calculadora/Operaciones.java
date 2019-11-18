@@ -89,6 +89,8 @@ class Operaciones {
             case "/-":
                 res = BigDecimal.ONE.divide(res,10,RoundingMode.HALF_EVEN);
                 break;
+            case "%":
+                res = res.divide(new BigDecimal("100"),2,RoundingMode.HALF_EVEN);
         }
 
         return res;

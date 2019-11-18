@@ -2,32 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/annotations-17.0.0-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/annotations-17.0.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/annotations-17.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Corellium/Papelera/BIN.S" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Corellium/Papelera/te.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Calculadora/CalculadoraController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Calculadora/Operaciones.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Calculadora/calculadora.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/commons_codec_1_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/commons_codec_1_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Calculadora/calculadora.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/img/Calculadora/icons8-clear-symbol-50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/img/Calculadora/icons8-divide-50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/img/Calculadora/icons8-equal-sign-50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/img/Calculadora/icons8-multiply-50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/img/Calculadora/icons8-plus-math-50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/img/Calculadora/icons8-subtract-50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/img/Calculadora/percentage_50px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/img/Calculadora/plus_minus_50px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/img/Calculadora/square_root_50px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/img/Escritorio/barraDeTareas/calculator_50px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/img/Escritorio/barraDeTareas/calculator_64px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/img/Escritorio/barraDeTareas/ping_pong_50px.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Corellium.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Corellium.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/ExploradorArchivos/ExploradorDeArchivosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/ExploradorArchivos/ExploradorDeArchivosController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/ExploradorArchivos/modelo/CrearArchivo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/ExploradorArchivos/modelo/CrearArchivo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/ExploradorArchivos/modelo/ListarArchivos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/ExploradorArchivos/modelo/ListarArchivos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Juegos/Buscaminas/BuscaminasController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Juegos/Buscaminas/Casillero.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Juegos/Buscaminas/PanelBuscaminas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Juegos/Buscaminas/buscaminas.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Corellium/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Calculadora/CalculadoraController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Calculadora/CalculadoraController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Calculadora/Operaciones.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Calculadora/Operaciones.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Calculadora/calculadora.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Calculadora/calculadora.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Escritorio/BarraDeTareasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Escritorio/BarraDeTareasController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Escritorio/barraDeTareas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Escritorio/barraDeTareas.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Ventana.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Ventana.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Corellium/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/Escritorio/escritorio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Escritorio/escritorio.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/ExploradorArchivos/ExploradorDeArchivosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/ExploradorArchivos/ExploradorDeArchivosController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/ExploradorArchivos/modelo/CrearArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/ExploradorArchivos/modelo/CrearArchivo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/ExploradorArchivos/modelo/ListarArchivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/ExploradorArchivos/modelo/ListarArchivos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/Calculadora/CalculadoraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Calculadora/CalculadoraController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/Calculadora/Operaciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Calculadora/Operaciones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/Calculadora/calculadora.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Calculadora/calculadora.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/Escritorio/BarraDeTareasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Escritorio/BarraDeTareasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/Escritorio/barraDeTareas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Escritorio/barraDeTareas.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Ventana.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,6 +88,8 @@
         <option value="Enum" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="CSS File" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -132,6 +136,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/SceneBuilder.lnk" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -257,7 +262,9 @@
       <workItem from="1573609994370" duration="22753000" />
       <workItem from="1573655122984" duration="11890000" />
       <workItem from="1573696123441" duration="909000" />
-      <workItem from="1573930453396" duration="40962000" />
+      <workItem from="1573930453396" duration="41726000" />
+      <workItem from="1574009841794" duration="2607000" />
+      <workItem from="1574014089398" duration="15341000" />
     </task>
     <servers />
   </component>

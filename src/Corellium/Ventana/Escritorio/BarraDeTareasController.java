@@ -12,7 +12,8 @@ public class BarraDeTareasController {
     @FXML
     GridPane parent;
 
-    BorderPane escritorio;
+    private BorderPane escritorio;
+    private boolean ventanaExterna = false;
 
     @FXML
     public void initialize() {
@@ -35,8 +36,13 @@ public class BarraDeTareasController {
             case "pingPong":
                 Ventana.instanciar("/Corellium/Ventana/Juegos/Pingpong/pingPong.fxml",
                         (BorderPane)parent.getParent(),this.getClass()); break;
+            case "calculadora":
+                ventanaExterna = true;
+                Ventana.loadFXML("/Corellium/Ventana/Calculadora/calculadora.fxml",this.getClass());
+                break;
         }
 
-        escritorio.setBottom(null);
+        if(!ventanaExterna) escritorio.setBottom(null);
+
     }
 }

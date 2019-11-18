@@ -1,0 +1,50 @@
+.root {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+    -fx-background-insets: 50;
+    /*-fx-background-color: rgba(255, 255, 255, 0.5);*/
+    /*-fx-effect: dropshadow(gaussian, #B3B3B3, 50, 0, 0, 0);*/
+    /*-fx-background-insets: 50;*/
+}
+
+.tool-bar {
+    -fx-background-color: #1D1D1D;
+}
+
+.menu-bar {
+    -fx-background-color: #c0c0c0;
+    /*-fx-text-fill: black;*/
+}
+
+.text-field {
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+
+}
+
+.entradaOperaciones {
+    -fx-text-fill: #B3B3B3;
+}
+
+.entradaNumero {
+    -fx-font-family: "Calibri";
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+.button {
+    -fx-background-color: #D9D9D9;
+    -fx-background-radius: 0;
+    -fx-text-fill: black;
+}
+
+.button:hover {
+    -fx-background-color: #B3B3B3;
+}
+
+.numeros {
+    -fx-background-color: white;
+    -fx-font-family: "Microsoft JhengHei";
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
