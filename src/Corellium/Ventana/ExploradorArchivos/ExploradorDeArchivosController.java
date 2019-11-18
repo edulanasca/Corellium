@@ -69,8 +69,6 @@ public class ExploradorDeArchivosController {
             TreeItem<File> f = new TreeItem<>(listRoot);
             nodoRaiz.getChildren().add(f);
         }
-        File papelera = new File("src/Corellium/Papelera");
-        nodoRaiz.getChildren().add(new TreeItem<>(papelera.getAbsoluteFile()));
         nodoRaiz.setExpanded(true);
         tree.setRoot(nodoRaiz);
         tree.setEditable(true);
@@ -154,9 +152,9 @@ public class ExploradorDeArchivosController {
                 "¿Desea eliminar este archivo?", this.getClass());
         if ((opcion.isPresent() && opcion.get() == ButtonType.OK)) {
             String origen = copiaOrigen.getAbsolutePath();
-            CopiarArchivo.getInstance().copiar(origen,papelera.getAbsolutePath()+ "/" + nombreArchivo);
+            CopiarArchivo.getInstance().copiar(origen, papelera.getAbsolutePath() + "/" + nombreArchivo);
             PapeleraController.ficherosBorrados.add(new ArchivoBorrado(origen, nombreArchivo));
-            if(copiaOrigen.delete()) {
+            if (copiaOrigen.delete()) {
                 ListarArchivos.crearIconoArchivos(new File(rutaActual.getText()));
                 VentanaAlerta.displayAlert(Alert.AlertType.INFORMATION, "Exito",
                         "Archivo eliminado.", this.getClass());
@@ -168,7 +166,7 @@ public class ExploradorDeArchivosController {
     }
 
     @FXML
-    void newArchivo(){
+    void newArchivo() {
         // ActionEvent: Crear un nuevo archivo
         CrearArchivo.rutaActual = rutaActual.getText();
         Ventana.loadFXML("/Corellium/Ventana/ExploradorArchivos/nuevoArchivo.fxml", this.getClass());

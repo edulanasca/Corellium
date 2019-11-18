@@ -3,13 +3,10 @@ package Corellium.Ventana.Calculadora;
 import Corellium.Ventana.Ventana;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.control.ToolBar;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
+import javafx.scene.layout.VBox;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -20,7 +17,7 @@ public class CalculadoraController {
     @FXML
     BorderPane root;
     @FXML
-    ToolBar barraSuperior;
+    VBox ventanaSup;
 
     @FXML
     TextField entradaOperaciones;
@@ -50,56 +47,21 @@ public class CalculadoraController {
     @FXML
     Button igual;
 
-    private double posX;
-    private double posY;
-
     private boolean operadorUnico = false;
 
-    public void initialize() { }
-
-    @FXML
-    void mousePressed(MouseEvent event) {
-        Ventana.onMousePressed(event);
-    }
-
-    @FXML
-    void mouseDragged(MouseEvent event) {
-        Stage stage = (Stage)barraSuperior.getScene().getWindow();
-        Ventana.onMouseDragged(stage, event);
-    }
-
-    @FXML
-    void cerrar() {
-        Stage stage = (Stage)barraSuperior.getScene().getWindow();
-        Ventana.cerrar(stage);
-    }
-
-    @FXML
-    void minimizar() {
-        Stage stage = (Stage)barraSuperior.getScene().getWindow();
-        stage.setMaximized(false);
-        Ventana.minimizar(stage,root.getPrefHeight(), root.getPrefWidth());
-        stage.setX(posX);
-        stage.setY(posY);
-    }
-
-    @FXML
-    void maximizar() {
-        Stage stage = (Stage)barraSuperior.getScene().getWindow();
-        posX = stage.getX();
-        posY = stage.getY();
-        Ventana.maximizar(stage);
+    public void initialize() {
+        ventanaSup.getChildren().add(0, Ventana.barraTitulo(this.getClass()));
     }
 
     @FXML
     void onAction(@NotNull ActionEvent event) {
 
-        if(Operaciones.resultado){
+        if (Operaciones.resultado) {
             entradaNumero.clear();
             Operaciones.resultado = false;
         }
 
-        if(event.getSource().equals(C)) {
+        if (event.getSource().equals(C)) {
             entradaOperaciones.clear();
             entradaNumero.setText("0");
             Operaciones.resultado = false;
@@ -122,21 +84,21 @@ public class CalculadoraController {
         String numero = entradaNumero.getText().replaceAll(",", "");
         String operador = "";
 
-        if(event.getSource().equals(raiz)) {
+        if (event.getSource().equals(raiz)) {
             operador = "√";
             entradaOperaciones.appendText("√(" + entradaNumero.getText() + ")");
         } else if (event.getSource().equals(potencia)) {
             operador = "**";
             entradaOperaciones.appendText("sqr(" + entradaNumero.getText() + ")");
-        } else if(event.getSource().equals(invertido)) {
-            operador ="/-";
+        } else if (event.getSource().equals(invertido)) {
+            operador = "/-";
             entradaOperaciones.appendText("1/(" + entradaNumero.getText() + ")");
-        } else if(event.getSource().equals(porcentaje)) {
+        } else if (event.getSource().equals(porcentaje)) {
             operador = "%";
             entradaOperaciones.appendText(entradaNumero.getText() + "%");
         }
         // Coloca el resultado en la entrada
-        entradaNumero.setText(Operaciones.OperacionUnica(numero,operador).toString());
+        entradaNumero.setText(Operaciones.OperacionUnica(numero, operador).toString());
     }
 
 
@@ -157,10 +119,11 @@ public class CalculadoraController {
             operador = "+";
         }
 
-        if(event.getSource().equals(igual)) {
+        if (event.getSource().equals(igual)) {
             // Al presionar igual retorna las operaciones, limpia la entrada de Operaciones y borra la lista de Operaciones
             entradaNumero.setText(Operaciones.Operacion().toString());
             Operaciones.resultado = true;
+            operadorUnico = false;
             entradaOperaciones.clear();
             List<String> remover = Operaciones.listaOperaciones;
             Operaciones.listaOperaciones.removeAll(remover);
@@ -168,7 +131,11 @@ public class CalculadoraController {
             // Cualquiera otra tecla espera por una nueva entrada
             entradaNumero.clear();
             Operaciones.listaOperaciones.add(operador);
-            entradaOperaciones.appendText(" " + numero + " " + operador);
+            if (!operadorUnico) {
+                entradaOperaciones.appendText(" " + numero + " " + operador);
+            } else {
+                entradaOperaciones.appendText(" " + operador);
+            }
         }
     }
 

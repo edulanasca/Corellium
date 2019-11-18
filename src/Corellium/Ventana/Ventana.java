@@ -71,45 +71,12 @@ public class Ventana {
         }
     }
 
-    /**
-     * YA NO HAY TIME SO PONDRÉ ESTAS FUNCIONES CHAFAS AQUI xdxd (Eduardo del futuro please save us)
-     * @param event controlador del evento
-     */
-    public static void onMousePressed(MouseEvent event) {
-        xOffset = event.getSceneX();
-        yOffset = event.getSceneY();
-    }
-
-    public static void onMouseDragged(Stage stage, MouseEvent event) {
-        stage.setX(event.getScreenX() - xOffset);
-        stage.setY(event.getScreenY() - yOffset);
-    }
-
-    public static void minimizar(Stage stage, double height, double width) {
-        stage.setHeight(height);
-        stage.setWidth(width);
-    }
-
-    public static void maximizar(Stage stage) {
-        stage.setMaximized(true);
-    }
-
-    public static void cerrar(Stage stage) {
-        stage.close();
-    }
-    /**
-     * AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-     */
-
     public static Parent barraTitulo(Class clase) {
-        if(barraTitulo == null) {
-            try {
-                barraTitulo = FXMLLoader.load(clase.getResource("/Corellium/Ventana/barraDeTitulo.fxml"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        try {
+            return FXMLLoader.load(clase.getResource("/Corellium/Ventana/barraDeTitulo.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
         }
-
-        return barraTitulo;
     }
 }
