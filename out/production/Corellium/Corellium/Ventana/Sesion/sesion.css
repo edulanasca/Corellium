@@ -1,0 +1,39 @@
+.root {
+
+}
+
+.opciones-background {
+    -fx-background-color: rgba(28, 28, 28, 0.6);
+}
+
+.opciones-menu {
+    -fx-background-color: transparent;
+}
+
+.menu-bar > .container > .menu-button:hover,
+.menu-bar > .container > .menu-button:focused,
+.menu-bar > .container > .menu-button:showing {
+    -fx-background-color: #575757;
+}
+
+.menu-item {
+    -fx-background-color: #1C1C1C;
+}
+
+.menu-item .label {
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+}
+
+.menu-item .label:disabled {
+    -fx-opacity: 1.0;
+}
+
+.menu-item:focused, .menu-item:hover {
+    -fx-background-color: #575757;
+}
+
+.context-menu {
+    -fx-background-color: #1C1C1C;
+    -fx-background-insets: 0;
+}

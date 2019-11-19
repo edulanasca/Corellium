@@ -4,7 +4,11 @@ module Corellium {
     requires javafx.web;
     requires javafx.graphics;
     requires java.desktop;
+    requires java.sql;
     requires org.jetbrains.annotations;
+    requires jna;
+    requires sqlite.jdbc;
+
 
     opens Corellium;
     opens Corellium.img.Escritorio;
@@ -17,9 +21,10 @@ module Corellium {
     opens Corellium.Ventana.Calculadora;
     opens Corellium.Ventana.Escritorio;
     opens Corellium.Ventana.Escritorio.Default;
-    opens Corellium.Ventana.Web;
-    opens Corellium.Ventana.Juegos.Pingpong;
-    opens Corellium.Ventana.Papelera;
     opens Corellium.Ventana.ExploradorArchivos;
     opens Corellium.Ventana.ExploradorArchivos.modelo;
+    opens Corellium.Ventana.Juegos.Pingpong;
+    opens Corellium.Ventana.Papelera;
+    opens Corellium.Ventana.Sesion;
+    opens Corellium.Ventana.Web;
 }

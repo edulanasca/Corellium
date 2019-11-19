@@ -2,20 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/cssdialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jna_4_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_27_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jna-4.2.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqlite-jdbc-3.27.2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pXrck2W.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/DAO/DAOFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/DAO/component/UsuarioDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/DAO/design/IUsuarioDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/DAO/ds/AccesoDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/DAO/pacYr.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/DAO/prueba.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/DAO/to/UsuarioTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Sesion/Kernel32.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Sesion/SesionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Sesion/sesion.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Sesion/sesion.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/img/Sesion/contacts_26px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/img/Sesion/full_battery_26px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/img/Sesion/info_26px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/img/Sesion/shutdown_26px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Corellium/img/Sesion/wi-fi_26px.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/commons_codec_1_11.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Escritorio/Default/Nuevo Presentación de Microsoft PowerPoint.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Escritorio/Default/Nuevo Presentación de Microsoft PowerPoint.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Escritorio/barraDeTareas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Escritorio/barraDeTareas.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/ExploradorArchivos/ExploradorDeArchivosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/ExploradorArchivos/ExploradorDeArchivosController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/barraDeTitulo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/barraDeTitulo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/BarraDeTituloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/BarraDeTituloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/Calculadora/CalculadoraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Calculadora/CalculadoraController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/Calculadora/calculadora.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Calculadora/calculadora.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/Escritorio/BarraDeTareasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Escritorio/BarraDeTareasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/Escritorio/barraDeTareas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Escritorio/barraDeTareas.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/ExploradorArchivos/ExploradorDeArchivosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/ExploradorArchivos/ExploradorDeArchivosController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/Juegos/Pingpong/pingPong.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Juegos/Pingpong/pingPong.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Ventana.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/barraDeTitulo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/barraDeTitulo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Corellium.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Corellium.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Calculadora/CalculadoraController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Calculadora/CalculadoraController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Escritorio/EscritorioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Escritorio/EscritorioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/FondoDinamico.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/FondoDinamico.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Ventana.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/Corellium/Ventana/Ventana.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Corellium/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Corellium/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/Escritorio/EscritorioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/Escritorio/EscritorioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Corellium/Ventana/FondoDinamico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Corellium/Ventana/FondoDinamico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module-info.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +49,36 @@
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="pXrck2W.db" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="pXrck2W.db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="pXrck2W.db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="DebuggerManager">
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
@@ -106,6 +160,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -121,7 +176,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Corellium/Ventana/Papelera" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/sqlite-jdbc-3.27.2.1.jar!/" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -130,23 +185,23 @@
     <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\DAO" />
+      <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\css" />
+      <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\img\Escritorio" />
+      <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\Ventana" />
+      <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\Escritorio" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="Corellium.Ventana" />
       <recent name="Corellium.Ventana.ExploradorArchivos" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\img\Sesion" />
       <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\Ventana\Papelera" />
       <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\img\ExploradorArchivos" />
       <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\img\Web" />
       <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\img\Web\barraSuperior" />
-      <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\img\Escritorio\bottom" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\css" />
-      <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\img\Escritorio" />
-      <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\Ventana" />
-      <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src\Corellium\Escritorio" />
-      <recent name="C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -161,7 +216,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.prueba">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -196,8 +251,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Prueba" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Corellium.Ventana.Sesion.Prueba" />
+      <module name="Corellium" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Corellium.Ventana.Sesion.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="prueba" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Corellium.DAO.prueba" />
+      <module name="Corellium" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Corellium.DAO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -233,6 +316,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.prueba" />
+        <item itemvalue="Application.Prueba" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5240b3e8" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5240b3e8" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@d276fbc" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -251,7 +360,8 @@
       <workItem from="1573930453396" duration="41726000" />
       <workItem from="1574009841794" duration="2607000" />
       <workItem from="1574014089398" duration="43474000" />
-      <workItem from="1574100355973" duration="3442000" />
+      <workItem from="1574100355973" duration="4822000" />
+      <workItem from="1574129324285" duration="19207000" />
     </task>
     <servers />
   </component>

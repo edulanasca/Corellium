@@ -1,5 +1,8 @@
 package Corellium.Ventana;
 
+import javafx.scene.Node;
+import javafx.scene.effect.BoxBlur;
+import javafx.scene.effect.GaussianBlur;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 
@@ -16,4 +19,11 @@ public class FondoDinamico {
         );
         pane.setBackground(new Background(bgImage));
     }
+
+    public static void blurEffect(Node node){
+        GaussianBlur blur = new GaussianBlur();
+        blur.setRadius(7.0);
+        node.setEffect(blur);
+    }
+
 }

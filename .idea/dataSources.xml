@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="pXrck2W.db" uuid="21664d97-cf76-4970-af08-1d63af83f73a">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\HP\OneDrive\2019-I\Sistemas Operativos\Corellium\pXrck2W.db</jdbc-url>
+    </data-source>
+  </component>
+</project>
