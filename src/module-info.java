@@ -26,5 +26,6 @@ module Corellium {
     opens Corellium.Ventana.Juegos.Pingpong;
     opens Corellium.Ventana.Papelera;
     opens Corellium.Ventana.Sesion;
+    opens Corellium.Ventana.Sesion.Usuario;
     opens Corellium.Ventana.Web;
 }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="350.0" maxWidth="370.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="350.0" styleClass="root" stylesheets="@usuario.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Corellium.Ventana.Sesion.Usuario.CrearUsuarioController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="118.0" layoutY="45.0" prefHeight="21.0" prefWidth="114.0" text="Agregar usuario" />
+            <Label layoutX="50.0" layoutY="115.0" text="Nombre" />
+            <TextField fx:id="nombre" layoutX="150.0" layoutY="112.0" />
+            <Label layoutX="50.0" layoutY="165.0" text="Contraseña" />
+            <PasswordField fx:id="pwd" layoutX="150.0" layoutY="162.0" />
+            <Label layoutX="51.0" layoutY="209.0" text="Confirmar &#10;contraseña" />
+            <PasswordField fx:id="confirmPwd" layoutX="150.0" layoutY="217.0" />
+            <Button layoutX="39.0" layoutY="303.0" mnemonicParsing="false" onAction="#crear" text="Crear" />
+            <Button layoutX="110.0" layoutY="303.0" mnemonicParsing="false" onAction="#limpiarCampos" text="Limpiar campos" />
+            <Button layoutX="244.0" layoutY="303.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
+            <Label fx:id="confirmacion" layoutX="73.0" layoutY="262.0" prefHeight="21.0" prefWidth="205.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

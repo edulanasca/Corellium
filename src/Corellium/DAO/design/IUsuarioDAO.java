@@ -9,5 +9,5 @@ public interface IUsuarioDAO {
     String insertUsuario(UsuarioTO usuario);
     String updateUsuario(UsuarioTO usuario);
     String deleteUsuario(int id);
-
+    UsuarioTO getUsuarioByName(String name);
 }

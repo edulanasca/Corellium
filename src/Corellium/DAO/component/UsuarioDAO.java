@@ -24,7 +24,7 @@ public class UsuarioDAO implements IUsuarioDAO {
         String sentencia = "SELECT * FROM users";
         Connection connection = db.getConnection();
 
-        if(connection != null) {
+        if (connection != null) {
             try {
                 PreparedStatement ps = connection.prepareStatement(sentencia);
                 ResultSet rs = ps.executeQuery();
@@ -34,6 +34,7 @@ public class UsuarioDAO implements IUsuarioDAO {
                     usuario.setId(rs.getInt("id"));
                     usuario.setNombre(rs.getString("nombre"));
                     usuario.setPwd(rs.getString("pwd"));
+                    lista.add(usuario);
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -54,13 +55,13 @@ public class UsuarioDAO implements IUsuarioDAO {
         Connection connection = db.getConnection();
         String sentencia = "INSERT INTO users (nombre, pwd) VALUES (?, ?)";
 
-        if(connection != null) {
+        if (connection != null) {
             try {
                 PreparedStatement ps = connection.prepareStatement(sentencia);
                 ps.setString(1, usuario.getNombre());
                 ps.setString(2, usuario.getPwd());
 
-                if(ps.executeUpdate() == 0) rpta = null;
+                if (ps.executeUpdate() == 0) rpta = null;
             } catch (SQLException e) {
                 e.printStackTrace();
             } finally {
@@ -82,10 +83,10 @@ public class UsuarioDAO implements IUsuarioDAO {
         String sentencia = "UPDATE users SET nombre='" + usuario.getNombre()
                 + "', pwd='" + usuario.getPwd() + "' WHERE id=" + usuario.getId();
 
-        if(connection != null) {
+        if (connection != null) {
             try {
                 PreparedStatement ps = connection.prepareStatement(sentencia);
-                if(ps.executeUpdate() == 0) rpta = null;
+                if (ps.executeUpdate() == 0) rpta = null;
             } catch (SQLException e) {
                 e.printStackTrace();
             } finally {
@@ -107,11 +108,11 @@ public class UsuarioDAO implements IUsuarioDAO {
         Connection connection = db.getConnection();
         String sentencia = "DELETE FROM users WHERE id=?";
 
-        if(connection != null) {
+        if (connection != null) {
             try {
                 PreparedStatement ps = connection.prepareStatement(sentencia);
                 ps.setInt(1, id);
-                if(ps.executeUpdate() == 0) rpta = null;
+                if (ps.executeUpdate() == 0) rpta = null;
             } catch (SQLException e) {
                 e.printStackTrace();
                 rpta = null;
@@ -125,5 +126,27 @@ public class UsuarioDAO implements IUsuarioDAO {
             }
         }
         return rpta;
+    }
+
+    @Override
+    public UsuarioTO getUsuarioByName(String name) {
+        UsuarioTO usuario = new UsuarioTO();
+        Connection connection = db.getConnection();
+        String sentencia = "SELECT * FROM users WHERE users.nombre='" + name + "'";
+
+        if (connection != null) {
+            try {
+                PreparedStatement ps = connection.prepareStatement(sentencia);
+                ResultSet rs = ps.executeQuery();
+
+                usuario.setId(rs.getInt("id"));
+                usuario.setNombre(rs.getString("nombre"));
+                usuario.setPwd(rs.getString("pwd"));
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return usuario;
     }
 }

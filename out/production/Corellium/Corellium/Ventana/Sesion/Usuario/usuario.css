@@ -1,0 +1,20 @@
+.root {
+    -fx-background-color: rgba(255,255,255, 0.2);
+}
+
+.label {
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+}
+
+.text-field {
+    -fx-background-radius: 0;
+    -fx-border-color: black;
+}
+
+.button {
+    -fx-font-size: 13px;
+    -fx-background-color: #1C1C1C;
+    -fx-text-fill: white;
+}

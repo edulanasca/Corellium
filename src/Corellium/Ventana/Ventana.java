@@ -18,7 +18,6 @@ public class Ventana {
 
     private static double xOffset = 0;
     private static double yOffset = 0;
-    private static Parent barraTitulo;
 
     private Ventana() { }
 

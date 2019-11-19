@@ -1,0 +1,20 @@
+.root {
+
+}
+
+.label{
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI Light";
+    -fx-font-size: 45px;
+}
+
+.hora {
+    -fx-font-size: 80px;
+}
+
+.password-field {
+    -fx-background-color: white;
+    -fx-opacity: 0.6;
+    -fx-background-radius: 0;
+    -fx-font-size: 18px;
+}

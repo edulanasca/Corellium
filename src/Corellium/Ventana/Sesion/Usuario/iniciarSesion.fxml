@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="404.0" maxWidth="695.0" prefHeight="352.0" prefWidth="599.0" stylesheets="@inicio.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Corellium.Ventana.Sesion.Usuario.IniciarSesionController">
+   <children>
+      <Label fx:id="hora" layoutX="59.0" layoutY="59.0" prefHeight="105.0" prefWidth="219.0" styleClass="hora" text="00:00" />
+      <Label fx:id="bienvenido" layoutX="59.0" layoutY="167.0" prefHeight="66.0" prefWidth="481.0" />
+      <PasswordField fx:id="pwd" layoutX="59.0" layoutY="246.0" onAction="#inicioSesion" prefHeight="47.0" prefWidth="274.0" />
+   </children>
+</AnchorPane>
