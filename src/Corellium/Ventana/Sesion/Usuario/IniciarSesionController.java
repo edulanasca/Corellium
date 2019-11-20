@@ -30,12 +30,13 @@ public class IniciarSesionController {
     }
 
     @FXML
-    void inicioSesion(){
+    void inicioSesion() {
         // Valida el usuario e inicia el escritorio
         IUsuarioDAO usuarioDAO = DAOFactory.getInstance().getUsuarioDAO();
         UsuarioTO usuario = usuarioDAO.getUsuarioByName(SesionController.usuarioActual);
-        if(pwd.getText().equals(usuario.getPwd())) {
-            Stage stage = (Stage)bienvenido.getScene().getWindow();
+        if (pwd.getText().equals(usuario.getPwd())) {
+            Stage stage = (Stage) bienvenido.getScene().getWindow();
+            SesionController.timerHora.cancel();
             stage.close();
             EscritorioController.cargarEscritorio(this.getClass());
         } else {
@@ -45,7 +46,7 @@ public class IniciarSesionController {
 
     public static Parent cargarInicioUsuario(Class clase) {
         // Carga una única instancia de inicio usuario
-        if(inicioUsuario == null) {
+        if (inicioUsuario == null) {
             try {
                 inicioUsuario = FXMLLoader.load(clase.getResource("/Corellium/Ventana/Sesion/Usuario/iniciarSesion.fxml"));
             } catch (IOException e) {

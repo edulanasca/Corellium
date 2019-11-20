@@ -18,6 +18,7 @@
    <top>
       <VBox fx:id="barraSuperior" BorderPane.alignment="CENTER">
          <children>
+
             <GridPane prefHeight="39.0" styleClass="grid-pane">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="164.0" minWidth="164.0" prefWidth="164.0" />
@@ -91,6 +92,7 @@
       <TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <tabs>
           <Tab fx:id="addPst" closable="false">
+
                <graphic>
                   <Button mnemonicParsing="false" onAction="#agregarPst">
                      <graphic>

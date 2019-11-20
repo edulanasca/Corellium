@@ -5,14 +5,24 @@ import Corellium.DAO.design.IUsuarioDAO;
 import Corellium.Ventana.FondoDinamico;
 import Corellium.Ventana.Sesion.Usuario.IniciarSesionController;
 import Corellium.Ventana.Ventana;
+import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SeparatorMenuItem;
 import javafx.scene.layout.*;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class SesionController {
 
@@ -21,8 +31,6 @@ public class SesionController {
     @FXML
     StackPane background;
     @FXML
-    BorderPane sesion;
-    @FXML
     GridPane sesionCentro;
 
     public Menu sistema;
@@ -30,16 +38,21 @@ public class SesionController {
     public Menu usuario;
     public Menu info;
 
+    private static Parent sesion;
     // Carga la instancia única de la ventana InicioUsuario
     private AnchorPane inicioUsuario = (AnchorPane) IniciarSesionController.cargarInicioUsuario(this.getClass());
     public static GridPane stSesionCentro; // Para cargar las ventanas en el centro del grid
+    private Label horaActual; // Label para la hora de inicioUsuario
+    public static Timer timerHora;
     public static String usuarioActual; // Nombre del usuario del que iniciará sesión
 
     public void initialize() {
         FondoDinamico.blurEffect(background);
         FondoDinamico.setFondoDinamico(background, "Corellium/img/Escritorio/Wallpaper.jpg");
         sesionCentro.add(inicioUsuario,1,1);
+        horaActual = (Label)inicioUsuario.getChildren().get(0);
         stSesionCentro = sesionCentro;
+        updateHora();
     }
 
     @FXML
@@ -80,6 +93,37 @@ public class SesionController {
     @FXML
     void setInfo() {
 
+    }
+
+    @FXML
+    void apagar() {
+        Stage stage = (Stage)scene.getScene().getWindow();
+        stage.close();
+    }
+
+    private void updateHora() {
+        timerHora = new Timer();
+        timerHora.schedule(new TimerTask() {
+            public void run() {
+                Platform.runLater(() -> horaActual.setText(LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"))));
+            }
+        }, 0, 1000);
+    }
+
+    public static void cargarSesion(Class clase) {
+        if(sesion == null) {
+            try {
+                sesion = FXMLLoader.load(clase.getResource("/Corellium/Ventana/Sesion/sesion.fxml"));
+                Stage stage = new Stage();
+                Scene scene = new Scene(sesion);
+                stage.setScene(scene);
+                stage.setTitle("Corellium v0.1");
+                stage.setMaximized(true);
+                stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 }

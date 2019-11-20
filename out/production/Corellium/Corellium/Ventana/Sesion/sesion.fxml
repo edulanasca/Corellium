@@ -14,7 +14,7 @@
 <StackPane fx:id="scene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" stylesheets="@sesion.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Corellium.Ventana.Sesion.SesionController">
    <children>
       <StackPane fx:id="background" prefHeight="150.0" prefWidth="200.0" />
-      <BorderPane fx:id="sesion" prefHeight="200.0" prefWidth="200.0" StackPane.alignment="CENTER">
+      <BorderPane prefHeight="200.0" prefWidth="200.0" StackPane.alignment="CENTER">
          <top>
             <StackPane styleClass="opciones-background" BorderPane.alignment="CENTER">
                <children>
@@ -24,7 +24,7 @@
                         <items>
                           <MenuItem mnemonicParsing="false" text="Hibernar" />
                               <MenuItem mnemonicParsing="false" text="Reiniciar" />
-                              <MenuItem mnemonicParsing="false" text="Apagar" />
+                              <MenuItem mnemonicParsing="false" onAction="#apagar" text="Apagar" />
                         </items>
                            <graphic>
                               <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
@@ -94,6 +94,9 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
+               <children>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
             </GridPane>
          </center>
       </BorderPane>
